@@ -19,6 +19,10 @@ separate little files that all focus on a single topic and _do one thing well_.
 	* [Bundling](#bundling)
 	* [Updating](#updating)
 	* [Locking](#locking)
+* [Shortcuts](#shortcuts)
+	* [Search](#search)
+	* [Select](#select)
+	* [Yank](#yank)
 * [Manuals](#manuals)
 	* [bin/clean](#binclean)
 	* [bin/delete](#bindelete)
@@ -238,6 +242,27 @@ Unlock a locked *BUNDLE* so that it can be updated again:
     cd BUNDLE
     git checkout master
 
+## Shortcuts
+
+This branch of the Vim configuration defines the following shortcuts.
+
+* `<C-C>` is like `<Esc>` but it doesn't break macros containing the Alt key.
+* Run `stty -ixon` before launching Vim to use `<C-S>` and `<C-Q>` shortcuts.
+
+### Search
+
+* `<C-L>` clears search highlighting; also recalculates hunks when diffing.
+
+### Select
+
+* `gV` visually selects the most recently pasted text.
+* `gn` selects the nearest search result after the cursor.
+* `gN` selects the nearest search result before the cursor.
+
+### Yank
+
+* `Y` yanks from cursor to end of line, like Vim's native `C` and `D` keys.
+
 ## Manuals
 
 The usage manual for each script is reproduced here, for your convenience.
@@ -375,3 +400,6 @@ Formats usage information from all scripts for injection into README.
 
 * [Plugin Layout in the Dark Ages][modular] by Steve Losh.
   [modular]: http://learnvimscriptthehardway.stevelosh.com/chapters/42.html
+
+* [Configuring Vim right](http://items.sjbach.com/319/configuring-vim-right)
+  by Stephen Bach.
