@@ -14,6 +14,9 @@ let g:deoplete#enable_smart_case = 1
 " Less waiting.
 let g:deoplete#auto_complete_delay = 50
 
+" Collect keywords from all buffers, regardless of filetype.
+call deoplete#custom#set('buffer', 'require_same_filetype', 0)
+
 " <Tab>: completion.
 inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-N>" :
